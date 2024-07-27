@@ -1,0 +1,13 @@
+- 👋 Hi, I’m @1PD-IS-NO-1
+- 👀 I’m interested in ...Data predction for the profit.(machine learning)
+- 🌱 I’m currently learning ...spark,NLP
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+
+<!---
+1PD-IS-NO-1/1PD-IS-NO-1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+Today 25 july 2024 i started my next project smart attendence system.I think in 10 days it will do it complete using deep learning and cv2.
