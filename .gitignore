@@ -1,0 +1,13 @@
+# Ignore compiled bytecode
+__pycache__/
+
+# Ignore database file
+attendance.db
+
+# Ignore Excel file
+attendance.xlsx
+
+# Ignore virtual environment
+venv/
+
+

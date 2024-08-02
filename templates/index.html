@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance System</h1>
+        <form action="{{ url_for('take_attendance') }}" method="get">
+            <select name="course" required>
+                <option value="">Select Course</option>
+                {% for course in courses %}
+                <option value="{{ course }}">{{ course }}</option>
+                {% endfor %}
+            </select>
+            <input type="date" name="date" required>
+            <button type="submit">Take Attendance</button>
+        </form>
+        <a href="{{ url_for('export_csv') }}" class="button">Export Attendance</a>
+        
+        <!-- Add the new button here -->
+        <button id="update-model">Update Face Recognition Model</button>
+    </div>
+
+    <!-- Add this script tag at the end of the body -->
+    <script>
+        document.getElementById('update-model').addEventListener('click', function() {
+            fetch('/update_model', {method: 'POST'})
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Face recognition model updated successfully');
+                    } else {
+                        alert('Failed to update face recognition model');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

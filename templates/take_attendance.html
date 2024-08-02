@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Take Attendance</h1>
+        <p>Course: {{ course }}</p>
+        <p>Date: {{ date }}</p>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video feed">
+        </div>
+        <button id="mark-attendance">Mark Attendance</button>
+        <div id="recognition-results"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
